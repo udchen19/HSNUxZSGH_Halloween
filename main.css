@@ -1,3 +1,52 @@
 * {
     font-family: Consolas;
 }
+
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+table {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 2px solid;
+}
+
+tr td{
+    border-color: black;
+    border: 2px solid;
+}
+
+#top_hint {
+    max-height: 30%;
+    min-height: 10%;
+}
+
+#bot_sec {
+    display:inline-block;
+    box-sizing:border-box;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#left_hint {
+    position: relative;
+    width: 100px;
+    right: 100%;
+    background-color: crimson;
+}
+
+#grid {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    right: 0;
+    bottom: 0;
+}
