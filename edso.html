@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+</head>
+<body id = "text">
+</body>
+
+<script>
+function setup() {
+    document.getElementById("text").innerHTML = "<b>2020年 10月 23日</b>\n難得條件都湊齊了，一切按筆記施行，還是失敗了。\n果然還是需要五行陣。\n靈魂與容器間確實形成了連結，\n然而靈魂力消散率高於預期，只好強制中斷儀式。\n儀式失控了。魂庫的封印似乎有些鬆動，但不要緊，不要緊。\n還有一次機會......" + document.getElementById("text").innerHTML;
+}
+window.onload = setup;
+document.addEventListener("orientationchange", function(event){
+    switch(window.orientation) 
+    {  
+        case -90: case 90:
+            /* Device is in landscape mode */
+            break; 
+        default:
+            /* Device is in portrait mode */
+    }
+});
+</script>
+
+<style>
+    @font-face {
+        font-family: KouzanBrushFont;
+        src: url("../Kouzan.ttf") format('truetype');
+    }
+    body {
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-image: url('background.jpg');
+        font-family: KouzanBrushFont;
+        font-size: xxx-large;
+        white-space: pre-line;
+        line-height: 1.5;
+        padding: 50px;
+    }
+</style>

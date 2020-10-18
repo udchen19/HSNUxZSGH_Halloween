@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+</head>
+<body id = "text">
+</body>
+
+<script>
+function setup() {
+    document.getElementById("text").innerHTML = "<b>--- 靈魂之源研究筆記之一 ---</b>\n\n1953年 10月 15日\n今年新建立了研究室，目標是探尋靈魂之源。\n\n<b>試驗體［000001］</b>\n<b>第一次實驗</b>\n經過強烈的刺激後，\n在頭部中心後方以及心臟部分偵測到微弱的靈魂波動。\n難以判斷靈魂之源的位置，進行調整後等待後續實驗。\n\n<b>第二次實驗</b>\n再次施以強烈刺激。\n隨著刺激強度和次數的增加，靈魂波動變得越來越弱。\n\n<b>第三次實驗</b>\n實驗體接觸到觸媒時，發生了強烈的靈魂波動反應。\n然而因為轉換效率太低，靈魂力消散過快。\n最終受驗體靈魂衰竭......只好再找下一個受驗體了。\n" + document.getElementById("text").innerHTML;
+}
+window.onload = setup;
+document.addEventListener("orientationchange", function(event){
+    switch(window.orientation) 
+    {  
+        case -90: case 90:
+            /* Device is in landscape mode */
+            break; 
+        default:
+            /* Device is in portrait mode */
+    }
+});
+</script>
+
+<style>
+    @font-face {
+        font-family: KouzanBrushFont;
+        src: url("../Kouzan.ttf") format('truetype');
+    }
+    body {
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-image: url('background.jpg');
+        font-family:KouzanBrushFont;
+        font-size: xxx-large;
+        white-space: pre-line;
+        line-height: 1.5;
+        padding: 50px;
+    }
+</style>

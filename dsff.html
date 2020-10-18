@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+</head>
+<body id = "text">
+</body>
+
+<script>
+function setup() {
+    document.getElementById("text").innerHTML = "中國........東\n印度........दक्षिण\n愛爾蘭....ó thuaidh\n美國........west\n希臘........κεντρικός\n\n火從南\n水從北\n木從東\n金從西\n土由中。" + document.getElementById("text").innerHTML;
+}
+window.onload = setup;
+document.addEventListener("orientationchange", function(event){
+    switch(window.orientation) 
+    {  
+        case -90: case 90:
+            /* Device is in landscape mode */
+            break; 
+        default:
+            /* Device is in portrait mode */
+    }
+});
+</script>
+
+<style>
+    @font-face {
+        font-family: KouzanBrushFont;
+        src: url("../Kouzan.ttf") format('truetype');
+    }
+    body {
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-image: url('background.jpg');
+        font-family:'Times New Roman', KouzanBrushFont;
+        font-weight: bold;
+        font-size: xxx-large;
+        white-space: pre-line;
+        line-height: 1.5;
+        padding: 50px;
+    }
+</style>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+</head>
+<body id = "text">
+</body>
+
+<script>
+function setup() {
+    document.getElementById("text").innerHTML = "<b>--- 靈魂之源研究筆記之二 ---</b>\n\n1953年10月31日\n經過不斷的實驗，研究終於得以進展。\n參照實驗標號［000133］的成功案列，可以總結出一些結論。\n目前已知的能夠進行靈魂置換的因素:\n第一：完整的靈魂\n第二：健全的容器\n第三：強力的觸媒\n\n從封印的魂庫提取能量可以補足靈魂力消耗率過快的問題，然而消耗量還是太大。\n根據計算結果，如果使用五行陣封住靈魂，或許就可以確保置換過程沒有靈魂力消散，將能大幅提升靈魂置換的成功率。\n然而，我們仍未確定五行牌的具體位置...... " + document.getElementById("text").innerHTML;
+}
+window.onload = setup;
+document.addEventListener("orientationchange", function(event){
+    switch(window.orientation) 
+    {  
+        case -90: case 90:
+            /* Device is in landscape mode */
+            break; 
+        default:
+            /* Device is in portrait mode */
+    }
+});
+</script>
+
+<style>
+    @font-face {
+        font-family: KouzanBrushFont;
+        src: url("../Kouzan.ttf") format('truetype');
+    }
+    body {
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-image: url('background.jpg');
+        font-family:KouzanBrushFont;
+        font-size: xxx-large;
+        white-space: pre-line;
+        line-height: 1.5;
+        padding: 50px;
+    }
+</style>
