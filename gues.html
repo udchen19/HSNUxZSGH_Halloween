@@ -24,8 +24,15 @@ document.addEventListener("orientationchange", function(event){
 
 <style>
     @font-face {
-        font-family: KouzanBrushFont;
-        src: url("../Kouzan.ttf") format('truetype');
+        font-family: 'KouzanBrushFont';
+        src: url('KouzanBrushFont.eot');
+        src: url('KouzanBrushFont.eot?#iefix') format('embedded-opentype'),
+            url('KouzanBrushFont.woff2') format('woff2'),
+            url('KouzanBrushFont.woff') format('woff'),
+            url('KouzanBrushFont.svg#KouzanBrushFont') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
     }
     body {
         position: absolute;
