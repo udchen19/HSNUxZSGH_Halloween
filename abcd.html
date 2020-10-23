@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+</head>
+<body id = "text">
+</body>
+
+<script>
+function setup() {
+    document.getElementById("text").innerHTML = "<b>滄華高中監視器紀錄</b>\n\n日期：2018年10月31日\n詳細敘述：\n美術老師在美術教室裡鬼鬼祟祟地做些什麼，\n似乎有些異樣......？" + document.getElementById("text").innerHTML;
+}
+window.onload = setup;
+document.addEventListener("orientationchange", function(event){
+    switch(window.orientation) 
+    {  
+        case -90: case 90:
+            /* Device is in landscape mode */
+            break; 
+        default:
+            /* Device is in portrait mode */
+    }
+});
+</script>
+
+<style>
+    @font-face {
+        font-family: KouzanBrushFont;
+        src: url("../Kouzan.ttf") format('truetype');
+    }
+    body {
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-image: url('background.jpg');
+        font-family:KouzanBrushFont;
+        font-size: xxx-large;
+        white-space: pre-line;
+        line-height: 1.5;
+        padding: 50px;
+    }
+</style>
